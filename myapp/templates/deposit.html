@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Amount</title>
+</head>
+<body>
+    <h1>Deposit Amount</h1>
+    <form method="post" action="{% url 'deposit' %}">
+        {% csrf_token %}
+        <label for="account_no">Enter account number:</label>
+        <input type="text" name="account_no" id="account_no" required>
+        <br><br>
+        <label for="amount">Enter amount:</label>
+        <input type="number" name="amount" id="amount" required>
+        <br><br>
+        <button type="submit">Deposit</button>
+    </form>
+</body>
+</html>
+

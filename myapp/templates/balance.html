@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balance Amount</title>
+</head>
+<body>
+    <h1>Balance</h1>
+    <form method="post" action="{% url 'balance' %}">
+        {% csrf_token %}
+        <label for="account_no">Enter account number:</label>
+        <input type="text" name="account_no" id="account_no" required>
+        <br><br>
+        <label for="password">Enter password:</label>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
+
+
+
+

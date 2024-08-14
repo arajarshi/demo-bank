@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfer Amount</title>
+</head>
+<body>
+    <h1>Transfer Amount</h1>
+    <form method="post" action="{% url 'transfer' %}">
+        {% csrf_token %}
+        <label for="source_account_no">Enter your account number:</label>
+        <input type="text" name="source_account_no" id="source_account_no" required>
+        <br><br>
+        <label for="target_account_no">Enter target account number:</label>
+        <input type="text" name="target_account_no" id="target_account_no" required>
+        <br><br>
+        <label for="amount">Enter amount:</label>
+        <input type="number" name="amount" id="amount" required>
+        <br><br>
+        <label for="password">Enter password:</label>
+        <input type="password" name="password" id="password" required>
+        <br><br>
+        <button type="submit">Transfer</button>
+    </form>
+</body>
+</html>
+
+
+
+
